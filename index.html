@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lanzarote – App</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0f3c5a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>
+:root{--pdc:#1fbf89;--ret:#8b5cf6;--sec:#3b82f6;--trf:#f59e0b;--bg:#f7fbff}
+*{box-sizing:border-box}body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:var(--bg);color:#0f2434}
+header{padding:14px 16px;border-bottom:3px solid #cfe3ff;background:#fff;position:sticky;top:0}
+h1{margin:0;font-size:20px}main{padding:14px 16px}
+a.btn{display:inline-block;margin:8px 6px 0 0;padding:10px 14px;border-radius:999px;background:#e8f6ff;border:2px solid #cfe3ff;color:#093452;text-decoration:none}
+iframe{width:100%;height:80vh;border:1px solid #dbe7f5;border-radius:12px;background:#fff}
+.note{font-size:13px;color:#3b556a;margin-top:8px}
+</style>
+</head>
+<body>
+<header><h1>Lanzarote – Phone v42</h1></header>
+<main>
+  <p>Die App läuft. Unten ist deine Reiseansicht eingebettet. Öffne sie im Vollbild und lege sie dann zum Home-Bildschirm.</p>
+  <p>
+    <a class="btn" href="./" onclick="location.reload()">Neu laden</a>
+    <a class="btn" href="#" onclick="window.open('lanz_phone_v42_wiki_in_details.html','_blank')">V42 einzeln öffnen</a>
+  </p>
+  <!-- Falls du die v42 noch nicht hochgeladen hast, kannst du das später tun.
+       Das iframe ist optional – du kannst hier auch deine komplette v42-HTML einfügen. -->
+  <iframe src="lanz_phone_v42_wiki_in_details.html" title="Reise-App"></iframe>
+
+  <p class="note">Tipp: Du kannst später den kompletten v42-HTML-Inhalt direkt hier in die index.html kopieren (zwischen &lt;body&gt;…&lt;/body&gt;), dann brauchst du das iframe nicht.</p>
+</main>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', ()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+}
+</script>
+</body></html>
