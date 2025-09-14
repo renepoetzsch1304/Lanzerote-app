@@ -1,4 +1,4 @@
-const CACHE = 'lanzarote-pwa-v8';
+const CACHE = 'lanzarote-pwa-v9';
 self.addEventListener('install', e => self.skipWaiting());
 self.addEventListener('activate', e => self.clients && self.clients.claim());
 const ASSETS = ['./','./index.html','./manifest.webmanifest'];
